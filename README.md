@@ -33,6 +33,12 @@ These simulations are **numerical evidence**, not a universal power ordering, a 
 
 The distributed P03/P04 source is a **scientifically validated curated variant** of an internal research archive: administrative histories were omitted and computational sources/protocols re-pinned. The scientific CSV results were unchanged and were reproduced after another 192,000 Monte Carlo draws. The unavailable internal archive is not required to execute this repository.
 
-## Citation and license
+## Citation and archival DOI
 
-See `CITATION.cff` for author/manuscript attribution and `LICENSE` for the MIT license governing original code. The manuscript text is not distributed. An archival DOI will only be added when actually assigned.
+The archived replication materials have Zenodo DOI **[10.5281/zenodo.24093613](https://doi.org/10.5281/zenodo.24093613)**.
+
+> Düzgün, O. (2026). *Finite-Sample Confirmation of an Increase–Decrease–Increase Pattern in Cubic Regression — Replication Materials* (v0.1.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.24093613
+
+The frozen GitHub release is [`v0.1.0`](https://github.com/oduzgun/cubic-pattern-confirmation-replication/releases/tag/v0.1.0). Subsequent documentation changes on the `main` branch do not modify that tagged source snapshot.
+
+The associated methodological manuscript remains unpublished and is not included in the software archive. See `CITATION.cff` for the software citation metadata and `LICENSE` for the MIT license governing original code.

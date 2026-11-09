@@ -7,6 +7,8 @@ authors:
     given-names: "Onur"
     orcid: "https://orcid.org/0009-0007-6288-6141"
 version: "0.1.0"
+date-released: "2026-11-09"
+doi: "10.5281/zenodo.24093613"
 url: "https://github.com/oduzgun/cubic-pattern-confirmation-replication"
 abstract: >-
   Curated source code, fixed numerical protocols and frozen results for two
