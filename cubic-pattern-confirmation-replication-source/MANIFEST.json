@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "curated_files_sha256": {
+    ".github/workflows/reproducibility.yml": "24c90fe3f431c34964875b17351f8d55e9cf2de30de00ef59d55d2567051c99b",
+    ".gitignore": "0368211143f9bbf6d2215efe3b38e1f707dd54139eac11260acaf70659caf0d0",
+    "CITATION.cff": "c24865e27476a2e8cb1a9dcb244eaa51fe4e775785a8852136b8b8ae97ca4e2d",
+    "LICENSE": "73bb15df19857cb734f0167390cc6d41d1a44c166d776793a63ffa80df940569",
+    "README.md": "c6f88b3c25858f996a6eab19b1f5c0ae3c77f2fc0842102a02a914ba7d3d07e3",
+    "docs/REPRODUCIBILITY.md": "4bf57b1ed4040ba86b3bd8d0e38696167ba12bc32a6ea5eea207f30e37b18296",
+    "requirements.txt": "815360a00e0e1d7a128cade3de11b66d3fe997cbd6e2c69f8081eb9bc8b88197",
+    "research/ectc.py": "d4a3d40d5100fd9797d77d41086d350f21bfeb6648afd873e4da5ac3465808e0",
+    "research/ectc_witness.py": "03ff42d8694a53b5f591983eadfd812d56a926a1fe12e71574b030736533977c",
+    "research/p03/paired_differences.csv": "a113fc8b65ca20319a437aff1f791639f9336b27eb674162e3b442b612674a6a",
+    "research/p03/protocol.json": "58262319c7651499d85dc79ae16ecd699d756b52c138b9dedf7e7bfa64669a37",
+    "research/p03/rates.csv": "c1c868ab8b98fe200c719fe47214805a2e384afe4d9421c4ad584b27123d7d36",
+    "research/p04/paired_differences.csv": "0f479466067c93ad82221e05a3be60b339124b3dce8f56ed64c89b57741bf00b",
+    "research/p04/protocol.json": "f6f7bad1bedb0c037dab51b8851b14087e34f618e64b60b5a8aadd856555ebe6",
+    "research/p04/rates.csv": "4256639587bb05db22eeaadebda4b10bc5e552f5e873cb19343ae97436b8e802",
+    "research/p04/split_diagnostics.csv": "26c98b00ea4972ddc48de143b0d057a6a80933a15f36104bd5ed8ea82b298cc5",
+    "research/replay_studies.py": "003e3ab3f2846d21b53871dba7e0dd5509968f128b3f93c58ec1742fbc78cb27",
+    "research/run_power_study.py": "28694bdc43204d9ca1499eba74002344117768ce3a93676af1c5df3f4af45e33",
+    "research/run_witness_study.py": "8b3c8edbf081bef8b57fc26346dc9323b74d1dd88e299ba070d4262d796ace58",
+    "scripts/verify_release.py": "929f54575eaea9ba4dcf468c519f6c91ed9247adda0e1b7e3d5e7ff6876bdc61"
+  },
+  "new_curated_source_hashes": {
+    "research/ectc.py": "d4a3d40d5100fd9797d77d41086d350f21bfeb6648afd873e4da5ac3465808e0",
+    "research/ectc_witness.py": "03ff42d8694a53b5f591983eadfd812d56a926a1fe12e71574b030736533977c",
+    "research/run_power_study.py": "28694bdc43204d9ca1499eba74002344117768ce3a93676af1c5df3f4af45e33",
+    "research/run_witness_study.py": "8b3c8edbf081bef8b57fc26346dc9323b74d1dd88e299ba070d4262d796ace58",
+    "research/p03/protocol.json": "58262319c7651499d85dc79ae16ecd699d756b52c138b9dedf7e7bfa64669a37",
+    "research/p04/protocol.json": "f6f7bad1bedb0c037dab51b8851b14087e34f618e64b60b5a8aadd856555ebe6",
+    "research/replay_studies.py": "003e3ab3f2846d21b53871dba7e0dd5509968f128b3f93c58ec1742fbc78cb27"
+  },
+  "validated_against_frozen_scientific_csvs": true,
+  "verification": "P03/P04 rerun with 1e-11 numeric-cell tolerance",
+  "distribution": "sanitized scientific replication source tree",
+  "verification_basis": "frozen scientific outputs and independent CI replay, 2026-11-09"
+}

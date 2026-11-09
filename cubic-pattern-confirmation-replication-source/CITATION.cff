@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Please cite the software and, where appropriate, its accompanying unpublished manuscript."
+title: "Finite-Sample Confirmation of an Increase–Decrease–Increase Pattern in Cubic Regression"
+type: software
+authors:
+  - family-names: "Düzgün"
+    given-names: "Onur"
+version: "0.1.0"
+keywords:
+  - cubic regression
+  - shape-restricted inference
+  - turning points
+  - intersection-union tests
+  - finite-sample inference
+preferred-citation:
+  type: article
+  title: "Finite-Sample Confirmation of an Increase–Decrease–Increase Pattern in Cubic Regression"
+  authors:
+    - family-names: "Düzgün"
+      given-names: "Onur"
+  year: 2026
+  notes: "Unpublished methodological manuscript; no journal acceptance or DOI claimed."

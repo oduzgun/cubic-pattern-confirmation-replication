@@ -1,0 +1,1152 @@
+{
+  "id": "ECTC-P03-v1",
+  "core_sha256": "d4a3d40d5100fd9797d77d41086d350f21bfeb6648afd873e4da5ac3465808e0",
+  "alpha": 0.05,
+  "sigma2": 1.0,
+  "interval": [
+    -1,
+    1
+  ],
+  "fixed_witnesses": [
+    0,
+    0.5
+  ],
+  "methods": [
+    "cone",
+    "witness_0",
+    "witness_0_5",
+    "PTCS"
+  ],
+  "population": "g(z)=(depth/halfwidth^2)*((z-center)^2-halfwidth^2); generic N requires abs(center)+halfwidth<1",
+  "designs": {
+    "uniform": "linspace(-1,1,n)",
+    "right_weighted": "2*sqrt(linspace(0,1,n))-1"
+  },
+  "interpretation": "depth=-min g is matched across centers and widths; boundary distances, curvature and information are not all held fixed. Witnesses are separately prespecified procedures, not an unadjusted adaptive choice.",
+  "seed": 2026091103,
+  "rng": "PCG64; SeedSequence.spawn one preflight stream and one independent stream per case",
+  "simulation": "Gaussian OLS derivative sufficient statistics plus independent chi-square residual variance; same draws used for all four methods",
+  "cases": [
+    {
+      "id": "alt_00",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        -0.2,
+        -0.0,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_01",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        -0.8,
+        -0.0,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_02",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        -0.2,
+        -0.0,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_03",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        -0.8,
+        -0.0,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_04",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0.4,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        3.0,
+        -15.999999999999998,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_05",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0.4,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        12.0,
+        -63.99999999999999,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_06",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0.4,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        0.3120000000000001,
+        -2.5600000000000005,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_07",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0.4,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        1.2480000000000004,
+        -10.240000000000002,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_08",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0.7,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        9.599999999999996,
+        -27.999999999999993,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_09",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0.7,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        38.399999999999984,
+        -111.99999999999997,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_10",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0.7,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        1.3679999999999999,
+        -4.4799999999999995,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_11",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0.7,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        5.4719999999999995,
+        -17.919999999999998,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_12",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        -0.2,
+        -0.0,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_13",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        -0.8,
+        -0.0,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_14",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        -0.2,
+        -0.0,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_15",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        -0.8,
+        -0.0,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_16",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0.4,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        3.0,
+        -15.999999999999998,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_17",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0.4,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        12.0,
+        -63.99999999999999,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_18",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0.4,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        0.3120000000000001,
+        -2.5600000000000005,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_19",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0.4,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        1.2480000000000004,
+        -10.240000000000002,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_20",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0.7,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        9.599999999999996,
+        -27.999999999999993,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_21",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0.7,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        38.399999999999984,
+        -111.99999999999997,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_22",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0.7,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        1.3679999999999999,
+        -4.4799999999999995,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_23",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0.7,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        5.4719999999999995,
+        -17.919999999999998,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_24",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        -0.2,
+        -0.0,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_25",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        -0.8,
+        -0.0,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_26",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        -0.2,
+        -0.0,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_27",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        -0.8,
+        -0.0,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_28",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0.4,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        3.0,
+        -15.999999999999998,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_29",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0.4,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        12.0,
+        -63.99999999999999,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_30",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0.4,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        0.3120000000000001,
+        -2.5600000000000005,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_31",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0.4,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        1.2480000000000004,
+        -10.240000000000002,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_32",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0.7,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        9.599999999999996,
+        -27.999999999999993,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_33",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0.7,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        38.399999999999984,
+        -111.99999999999997,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_34",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0.7,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        1.3679999999999999,
+        -4.4799999999999995,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_35",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0.7,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        5.4719999999999995,
+        -17.919999999999998,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_36",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        -0.2,
+        -0.0,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_37",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        -0.8,
+        -0.0,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_38",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        -0.2,
+        -0.0,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_39",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        -0.8,
+        -0.0,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_40",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0.4,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        3.0,
+        -15.999999999999998,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_41",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0.4,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        12.0,
+        -63.99999999999999,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_42",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0.4,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        0.3120000000000001,
+        -2.5600000000000005,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_43",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0.4,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        1.2480000000000004,
+        -10.240000000000002,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_44",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0.7,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        9.599999999999996,
+        -27.999999999999993,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_45",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0.7,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        38.399999999999984,
+        -111.99999999999997,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_46",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0.7,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        1.3679999999999999,
+        -4.4799999999999995,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_47",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0.7,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        5.4719999999999995,
+        -17.919999999999998,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "null_00_zero",
+      "kind": "null",
+      "null_type": "zero",
+      "n": 120,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0,
+        0,
+        0
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_01_double_center",
+      "kind": "null",
+      "null_type": "double_center",
+      "n": 120,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0,
+        0,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_02_double_shift",
+      "kind": "null",
+      "null_type": "double_shift",
+      "n": 120,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0.25,
+        -1,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_03_both_endpoints",
+      "kind": "null",
+      "null_type": "both_endpoints",
+      "n": 120,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        -1,
+        0,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_04_right_endpoint",
+      "kind": "null",
+      "null_type": "right_endpoint",
+      "n": 120,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0.5,
+        -1.5,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_05_increasing",
+      "kind": "null",
+      "null_type": "increasing",
+      "n": 120,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        1,
+        0,
+        0.5
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_06_zero",
+      "kind": "null",
+      "null_type": "zero",
+      "n": 120,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0,
+        0,
+        0
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_07_double_center",
+      "kind": "null",
+      "null_type": "double_center",
+      "n": 120,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0,
+        0,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_08_double_shift",
+      "kind": "null",
+      "null_type": "double_shift",
+      "n": 120,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0.25,
+        -1,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_09_both_endpoints",
+      "kind": "null",
+      "null_type": "both_endpoints",
+      "n": 120,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        -1,
+        0,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_10_right_endpoint",
+      "kind": "null",
+      "null_type": "right_endpoint",
+      "n": 120,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0.5,
+        -1.5,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_11_increasing",
+      "kind": "null",
+      "null_type": "increasing",
+      "n": 120,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        1,
+        0,
+        0.5
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_12_zero",
+      "kind": "null",
+      "null_type": "zero",
+      "n": 480,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0,
+        0,
+        0
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_13_double_center",
+      "kind": "null",
+      "null_type": "double_center",
+      "n": 480,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0,
+        0,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_14_double_shift",
+      "kind": "null",
+      "null_type": "double_shift",
+      "n": 480,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0.25,
+        -1,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_15_both_endpoints",
+      "kind": "null",
+      "null_type": "both_endpoints",
+      "n": 480,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        -1,
+        0,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_16_right_endpoint",
+      "kind": "null",
+      "null_type": "right_endpoint",
+      "n": 480,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0.5,
+        -1.5,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_17_increasing",
+      "kind": "null",
+      "null_type": "increasing",
+      "n": 480,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        1,
+        0,
+        0.5
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_18_zero",
+      "kind": "null",
+      "null_type": "zero",
+      "n": 480,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0,
+        0,
+        0
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_19_double_center",
+      "kind": "null",
+      "null_type": "double_center",
+      "n": 480,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0,
+        0,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_20_double_shift",
+      "kind": "null",
+      "null_type": "double_shift",
+      "n": 480,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0.25,
+        -1,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_21_both_endpoints",
+      "kind": "null",
+      "null_type": "both_endpoints",
+      "n": 480,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        -1,
+        0,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_22_right_endpoint",
+      "kind": "null",
+      "null_type": "right_endpoint",
+      "n": 480,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0.5,
+        -1.5,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_23_increasing",
+      "kind": "null",
+      "null_type": "increasing",
+      "n": 480,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        1,
+        0,
+        0.5
+      ],
+      "replications": 2000
+    }
+  ],
+  "reporting": {
+    "marginal_rates": "95% Clopper-Pearson intervals",
+    "paired_differences": "cone minus each comparator; discordant win/loss counts with conservative Clopper-Pearson-derived intervals",
+    "simultaneous_power_family": 144,
+    "simultaneous_construction": "For each of 144 differences use two binomial intervals at confidence 1-0.05/(2*144); subtract loss interval from win interval. Union bound gives >=95% coverage across the prespecified 144 differences.",
+    "null_family": 96,
+    "null_alarm": "any 95% family-adjusted exact lower bound above 0.05 across 24 null cases * 4 methods triggers scientific HOLD",
+    "no_cherry_picking": "Save every cell and discordant count; no best-case claim without family bounds. No pooling heterogeneous cells into a population power estimate."
+  },
+  "checks": {
+    "core_match": "exact hash match to locally frozen core",
+    "preflight": "64 independent draws per design-size; optimized N-only runner must match CubicDesign.evaluate and a separate witness=0.5 design",
+    "intervals": "binomial endpoint/interior checks against scipy.stats.binomtest exact intervals",
+    "ptcs_subset": "every PTCS certification must also be a cone certification; otherwise stop",
+    "failures": "abort and preserve failure record; do not discard or replace a failed replication"
+  },
+  "limits": "one bounded study, 96000 replications, per-command timeout 120 seconds, no new dependencies, no empirical or external action, no method retuning"
+}

@@ -1,0 +1,1202 @@
+{
+  "id": "ECTC-P04-v1",
+  "alpha": 0.05,
+  "sigma2": 1.0,
+  "interval": [
+    -1,
+    1
+  ],
+  "core_sha256": "d4a3d40d5100fd9797d77d41086d350f21bfeb6648afd873e4da5ac3465808e0",
+  "helper_sha256": "28694bdc43204d9ca1499eba74002344117768ce3a93676af1c5df3f4af45e33",
+  "methods": [
+    "cone",
+    "witness_0",
+    "grid_9",
+    "grid_19",
+    "split_50",
+    "PTCS"
+  ],
+  "primary_comparators": [
+    "grid_9",
+    "grid_19",
+    "split_50"
+  ],
+  "grids": {
+    "grid_9": [
+      -0.8,
+      -0.6,
+      -0.4,
+      -0.2,
+      0.0,
+      0.2,
+      0.4,
+      0.6,
+      0.8
+    ],
+    "grid_19": [
+      -0.9,
+      -0.8,
+      -0.7,
+      -0.6,
+      -0.5,
+      -0.4,
+      -0.3,
+      -0.2,
+      -0.1,
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ]
+  },
+  "grid_pvalue": "max(p_plus(left),p_plus(right),min(1,m*min_w p_minus(w))); Bonferroni applies only to the negative-witness union",
+  "grid_caveat": "Both grids fixed before P04. The fine grid includes every alternative center in this inherited design; do not generalize its performance to arbitrary off-grid or narrower signals.",
+  "split": {
+    "training_rows": "zero-based even indices of the sorted fixed design",
+    "confirmation_rows": "zero-based odd indices",
+    "allocation": "50/50, fixed once; no search across splits or cross-fitting",
+    "selection": "training-only quadratic derivative vertex, if leading coefficient positive and vertex strictly inside [-1,1]; otherwise abstain",
+    "confirmation": "all three slope tests use confirmation-only coefficients, variance and n_confirmation-4 degrees of freedom",
+    "scope": "N-specific adaptive witness, not a six-way topology selector"
+  },
+  "cases": [
+    {
+      "id": "alt_00",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        -0.2,
+        -0.0,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_01",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        -0.8,
+        -0.0,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_02",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        -0.2,
+        -0.0,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_03",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        -0.8,
+        -0.0,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_04",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0.4,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        3.0,
+        -15.999999999999998,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_05",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0.4,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        12.0,
+        -63.99999999999999,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_06",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0.4,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        0.3120000000000001,
+        -2.5600000000000005,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_07",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0.4,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        1.2480000000000004,
+        -10.240000000000002,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_08",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0.7,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        9.599999999999996,
+        -27.999999999999993,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_09",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0.7,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        38.399999999999984,
+        -111.99999999999997,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_10",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0.7,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        1.3679999999999999,
+        -4.4799999999999995,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_11",
+      "kind": "alternative",
+      "n": 120,
+      "design": "uniform",
+      "center": 0.7,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        5.4719999999999995,
+        -17.919999999999998,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_12",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        -0.2,
+        -0.0,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_13",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        -0.8,
+        -0.0,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_14",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        -0.2,
+        -0.0,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_15",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        -0.8,
+        -0.0,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_16",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0.4,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        3.0,
+        -15.999999999999998,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_17",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0.4,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        12.0,
+        -63.99999999999999,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_18",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0.4,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        0.3120000000000001,
+        -2.5600000000000005,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_19",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0.4,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        1.2480000000000004,
+        -10.240000000000002,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_20",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0.7,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        9.599999999999996,
+        -27.999999999999993,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_21",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0.7,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        38.399999999999984,
+        -111.99999999999997,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_22",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0.7,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        1.3679999999999999,
+        -4.4799999999999995,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_23",
+      "kind": "alternative",
+      "n": 120,
+      "design": "right_weighted",
+      "center": 0.7,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        5.4719999999999995,
+        -17.919999999999998,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_24",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        -0.2,
+        -0.0,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_25",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        -0.8,
+        -0.0,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_26",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        -0.2,
+        -0.0,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_27",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        -0.8,
+        -0.0,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_28",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0.4,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        3.0,
+        -15.999999999999998,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_29",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0.4,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        12.0,
+        -63.99999999999999,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_30",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0.4,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        0.3120000000000001,
+        -2.5600000000000005,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_31",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0.4,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        1.2480000000000004,
+        -10.240000000000002,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_32",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0.7,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        9.599999999999996,
+        -27.999999999999993,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_33",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0.7,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        38.399999999999984,
+        -111.99999999999997,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_34",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0.7,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        1.3679999999999999,
+        -4.4799999999999995,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_35",
+      "kind": "alternative",
+      "n": 480,
+      "design": "uniform",
+      "center": 0.7,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        5.4719999999999995,
+        -17.919999999999998,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_36",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        -0.2,
+        -0.0,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_37",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        -0.8,
+        -0.0,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_38",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        -0.2,
+        -0.0,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_39",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        -0.8,
+        -0.0,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_40",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0.4,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        3.0,
+        -15.999999999999998,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_41",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0.4,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        12.0,
+        -63.99999999999999,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_42",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0.4,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        0.3120000000000001,
+        -2.5600000000000005,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_43",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0.4,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        1.2480000000000004,
+        -10.240000000000002,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_44",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0.7,
+      "halfwidth": 0.1,
+      "depth": 0.2,
+      "derivative": [
+        9.599999999999996,
+        -27.999999999999993,
+        19.999999999999996
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_45",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0.7,
+      "halfwidth": 0.1,
+      "depth": 0.8,
+      "derivative": [
+        38.399999999999984,
+        -111.99999999999997,
+        79.99999999999999
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_46",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0.7,
+      "halfwidth": 0.25,
+      "depth": 0.2,
+      "derivative": [
+        1.3679999999999999,
+        -4.4799999999999995,
+        3.2
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "alt_47",
+      "kind": "alternative",
+      "n": 480,
+      "design": "right_weighted",
+      "center": 0.7,
+      "halfwidth": 0.25,
+      "depth": 0.8,
+      "derivative": [
+        5.4719999999999995,
+        -17.919999999999998,
+        12.8
+      ],
+      "replications": 1000
+    },
+    {
+      "id": "null_00_zero",
+      "kind": "null",
+      "null_type": "zero",
+      "n": 120,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0,
+        0,
+        0
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_01_double_center",
+      "kind": "null",
+      "null_type": "double_center",
+      "n": 120,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0,
+        0,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_02_double_shift",
+      "kind": "null",
+      "null_type": "double_shift",
+      "n": 120,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0.25,
+        -1,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_03_both_endpoints",
+      "kind": "null",
+      "null_type": "both_endpoints",
+      "n": 120,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        -1,
+        0,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_04_right_endpoint",
+      "kind": "null",
+      "null_type": "right_endpoint",
+      "n": 120,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0.5,
+        -1.5,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_05_increasing",
+      "kind": "null",
+      "null_type": "increasing",
+      "n": 120,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        1,
+        0,
+        0.5
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_06_zero",
+      "kind": "null",
+      "null_type": "zero",
+      "n": 120,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0,
+        0,
+        0
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_07_double_center",
+      "kind": "null",
+      "null_type": "double_center",
+      "n": 120,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0,
+        0,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_08_double_shift",
+      "kind": "null",
+      "null_type": "double_shift",
+      "n": 120,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0.25,
+        -1,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_09_both_endpoints",
+      "kind": "null",
+      "null_type": "both_endpoints",
+      "n": 120,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        -1,
+        0,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_10_right_endpoint",
+      "kind": "null",
+      "null_type": "right_endpoint",
+      "n": 120,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0.5,
+        -1.5,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_11_increasing",
+      "kind": "null",
+      "null_type": "increasing",
+      "n": 120,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        1,
+        0,
+        0.5
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_12_zero",
+      "kind": "null",
+      "null_type": "zero",
+      "n": 480,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0,
+        0,
+        0
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_13_double_center",
+      "kind": "null",
+      "null_type": "double_center",
+      "n": 480,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0,
+        0,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_14_double_shift",
+      "kind": "null",
+      "null_type": "double_shift",
+      "n": 480,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0.25,
+        -1,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_15_both_endpoints",
+      "kind": "null",
+      "null_type": "both_endpoints",
+      "n": 480,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        -1,
+        0,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_16_right_endpoint",
+      "kind": "null",
+      "null_type": "right_endpoint",
+      "n": 480,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0.5,
+        -1.5,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_17_increasing",
+      "kind": "null",
+      "null_type": "increasing",
+      "n": 480,
+      "design": "uniform",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        1,
+        0,
+        0.5
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_18_zero",
+      "kind": "null",
+      "null_type": "zero",
+      "n": 480,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0,
+        0,
+        0
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_19_double_center",
+      "kind": "null",
+      "null_type": "double_center",
+      "n": 480,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0,
+        0,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_20_double_shift",
+      "kind": "null",
+      "null_type": "double_shift",
+      "n": 480,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0.25,
+        -1,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_21_both_endpoints",
+      "kind": "null",
+      "null_type": "both_endpoints",
+      "n": 480,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        -1,
+        0,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_22_right_endpoint",
+      "kind": "null",
+      "null_type": "right_endpoint",
+      "n": 480,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        0.5,
+        -1.5,
+        1
+      ],
+      "replications": 2000
+    },
+    {
+      "id": "null_23_increasing",
+      "kind": "null",
+      "null_type": "increasing",
+      "n": 480,
+      "design": "right_weighted",
+      "center": null,
+      "halfwidth": null,
+      "depth": null,
+      "derivative": [
+        1,
+        0,
+        0.5
+      ],
+      "replications": 2000
+    }
+  ],
+  "seed": 2026091104,
+  "rng": "PCG64; SeedSequence.spawn one independent preflight stream and one stream per case",
+  "simulation": "raw iid Gaussian errors on the fixed cubic mean; full and disjoint-half fits from the same response realization, preserving paired dependence correctly",
+  "replications": 96000,
+  "reporting": {
+    "rate_intervals": "95% Clopper-Pearson",
+    "primary_difference_family": 144,
+    "difference_intervals": "same conservative paired-discordance construction as P03, jointly >=95% across 48 alternatives times 3 primary comparators",
+    "null_family": 144,
+    "null_alarm": "family-adjusted exact binomial lower bound above 0.05; preserve and flag scientific HOLD",
+    "anchors": "witness_0 and PTCS reported descriptively, not added to the primary difference family",
+    "failure_policy": "stop on numerical or input failure; never omit a failed replication",
+    "no_selection": "do not choose between grid resolutions or witnesses after observing confirmation outcomes without additional valid adjustment"
+  },
+  "checks": {
+    "independent_fit_reference": "32 raw-data draws per four design-size combinations checked against scalar CubicDesign and independent least-squares confirmation calculations",
+    "grid_reference": "scalar SciPy t tails at every fixed witness; duplicate or non-interior witnesses rejected",
+    "split_isolation": "confirmation perturbations cannot affect training-selected witness; inactive vertex gives p=1",
+    "degrees_and_rows": "disjoint exhaustive halves; full rank; confirmation n-4, never full-sample variance",
+    "interval_reference": "inherited exact-interval helpers remain frozen"
+  },
+  "limits": [
+    "Not a complete novelty audit or independent numerical implementation audit",
+    "No heteroskedasticity or dependence extension",
+    "No full ECTC-S classifier or optimal split/grid claim",
+    "Inherited finite design grid, not universal performance assessment",
+    "P04 does not provide comprehensive external validation of the full ECTC-S procedure"
+  ]
+}
