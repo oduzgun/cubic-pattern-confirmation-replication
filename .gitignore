@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+research/p03_rerun/
+research/p04_rerun/
+research/p03_ci/
+research/p04_ci/
+*.egg-info/
+.DS_Store

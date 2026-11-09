@@ -1,0 +1,26 @@
+name: Reproduce P03 and P04
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  scientific-reproduction:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install frozen dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements.txt
+      - name: Verify public file manifest
+        run: python scripts/verify_release.py
+      - name: Recompute 192000 Monte Carlo draws
+        run: |
+          python research/replay_studies.py --study p03 --output-dir research/p03_rerun
+          python research/run_witness_study.py --output-dir research/p04_rerun
+      - name: Compare against frozen scientific CSVs
+        run: python scripts/verify_release.py --compare-rerun
