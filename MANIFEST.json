@@ -3,7 +3,7 @@
   "curated_files_sha256": {
     ".github/workflows/reproducibility.yml": "24c90fe3f431c34964875b17351f8d55e9cf2de30de00ef59d55d2567051c99b",
     ".gitignore": "0368211143f9bbf6d2215efe3b38e1f707dd54139eac11260acaf70659caf0d0",
-    "CITATION.cff": "c24865e27476a2e8cb1a9dcb244eaa51fe4e775785a8852136b8b8ae97ca4e2d",
+    "CITATION.cff": "00374235a49b27b451b7d3c0106a4465fb316f336cf3f543fe9dff6d9b61d80b",
     "LICENSE": "73bb15df19857cb734f0167390cc6d41d1a44c166d776793a63ffa80df940569",
     "README.md": "c6f88b3c25858f996a6eab19b1f5c0ae3c77f2fc0842102a02a914ba7d3d07e3",
     "docs/REPRODUCIBILITY.md": "4bf57b1ed4040ba86b3bd8d0e38696167ba12bc32a6ea5eea207f30e37b18296",

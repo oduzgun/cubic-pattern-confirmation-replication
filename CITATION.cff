@@ -1,22 +1,22 @@
 cff-version: 1.2.0
-message: "Please cite the software and, where appropriate, its accompanying unpublished manuscript."
-title: "Finite-Sample Confirmation of an Increase–Decrease–Increase Pattern in Cubic Regression"
+message: "If you use these materials, please cite the software replication package. Cite the accompanying manuscript separately if published."
+title: "Finite-Sample Confirmation of an Increase–Decrease–Increase Pattern in Cubic Regression — Replication Materials"
 type: software
 authors:
   - family-names: "Düzgün"
     given-names: "Onur"
+    orcid: "https://orcid.org/0009-0007-6288-6141"
 version: "0.1.0"
+url: "https://github.com/oduzgun/cubic-pattern-confirmation-replication"
+abstract: >-
+  Curated source code, fixed numerical protocols and frozen results for two
+  Monte Carlo studies (P03/P04; 192,000 replications) of finite-sample
+  confirmation procedures for a strict increase-decrease-increase pattern
+  in correctly specified Gaussian cubic regression.
 keywords:
   - cubic regression
   - shape-restricted inference
   - turning points
   - intersection-union tests
   - finite-sample inference
-preferred-citation:
-  type: article
-  title: "Finite-Sample Confirmation of an Increase–Decrease–Increase Pattern in Cubic Regression"
-  authors:
-    - family-names: "Düzgün"
-      given-names: "Onur"
-  year: 2026
-  notes: "Unpublished methodological manuscript; no journal acceptance or DOI claimed."
+  - Monte Carlo simulation
